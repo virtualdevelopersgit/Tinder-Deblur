@@ -3,15 +3,12 @@
 // @namespace   Violentmonkey Scripts
 // @match       https://tinder.com/*
 // @grant       none
-// @version     2.9
+// @version     2.9 (Enhanced by us)
 // @author      Virtual Developers
-// @downloadURL tinder-deblur.user.js
+// @downloadURL https://github.com/virtualdevelopersgit/Tinder-Deblur/raw/main/tinder-deblur.user.js
 // @description Simple script using the official Tinder API to get clean photos of the users who liked you
 // ==/UserScript==
 
-/**
- * Core logic of the script
- */
 async function unblur() {
 	const teasers = await fetchTeasers();
 	const teaserEls = document.querySelectorAll('.Expand.enterAnimationContainer > div:nth-child(1)');
